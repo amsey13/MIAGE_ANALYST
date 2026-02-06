@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bpmn-js/dist/assets/diagram-js.css';
+@import 'bpmn-js/dist/assets/bpmn-font/css/bpmn.css';
+
+html, body { height: 100%; margin: 0; box-sizing: border-box; }
+/* --- MODE WIREFRAME "BALSAMIQ STYLE" --- */
+body.wireframe-active {
+  /* 1. La magie : tout passe en noir et blanc instantanément */
+  filter: grayscale(100%) contrast(110%);
+  background-color: #ffffff !important;
+
+  /* 2. La police "Manuscrite" pour l'effet dessin */
+  * {
+    font-family: 'Kalam', cursive, sans-serif !important;
+    box-shadow: none !important; /* On aplatit tout */
+    text-shadow: none !important;
+    transition: none !important;
+  }
+
+  /* 3. Les Navbar et conteneurs : On garde la structure mais on la simplifie */
+  .navbar, header, nav {
+    background: #ffffff !important;
+    border-bottom: 3px solid #333 !important; /* Gros trait de feutre */
+    color: #000 !important;
+  }
+
+  /* Corrige la couleur des liens dans la navbar pour qu'ils soient visibles en N&B */
+  .navbar a {
+    color: #000 !important;
+    font-weight: bold;
+  }
+
+  /* 4. Les Boutons : Style "Esquisse" */
+  button, .btn, input[type="submit"] {
+    background: #fff !important;
+    border: 3px solid #333 !important; /* Bordure épaisse irrégulière simulée */
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px !important; /* Forme patate irrégulière */
+    color: #000 !important;
+    font-weight: 700 !important;
+    font-size: 1.1em !important;
+  }
+
+  /* 5. Les Inputs : Juste une ligne en bas */
+  input:not([type="submit"]), select, textarea {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid #555 !important;
+    color: #000 !important;
+  }
+
+  /* 6. Les Cards / Conteneurs principaux */
+  .card, .panel, main > div {
+    border: 2px solid #333 !important;
+    background: #fff !important;
+    /* Un petit radius irrégulier pour faire "dessiné" */
+    border-radius: 2px !important;
+  }
+
+  /* 7. Liens actifs */
+  a.active {
+    background: transparent !important;
+    border: 2px solid #000 !important;
+    border-radius: 50% / 10% !important; /* Effet "encerclé au stylo" */
+    color: #000 !important;
+  }
+}
